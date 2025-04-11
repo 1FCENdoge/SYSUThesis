@@ -53,7 +53,7 @@ multirow
 titlesec
 unicode-math
 makecell
-csvsimple-l3
+csvsimple
 adjustbox
 #
 # Dependencies for fonts
