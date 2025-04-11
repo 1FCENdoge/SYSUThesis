@@ -59,7 +59,6 @@ fandol
 stix2-otf
 tex-gyre
 xits
-fonts-noto-cjk-extra
 #
 # Dependencies for extra packages
 booktabs
