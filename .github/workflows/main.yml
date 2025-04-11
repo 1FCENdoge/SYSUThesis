@@ -19,7 +19,7 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           packages: |
-            full
+            scheme-full
 
       - name: Test thesis
         run: make main
