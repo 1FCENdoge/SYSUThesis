@@ -53,6 +53,8 @@ multirow
 titlesec
 unicode-math
 makecell
+csvsimple-l3
+adjustbox
 #
 # Dependencies for fonts
 fandol
