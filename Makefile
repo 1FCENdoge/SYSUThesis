@@ -1,7 +1,7 @@
 MAIN = main
 NAME = sysuthesis
 CLSFILES = $(NAME).cls
-BSTFILES = $(NAME)-numerical.bst $(NAME)-authoryear.bst $(NAME)-bachelor.bst
+BSTFILES = $(NAME)-numerical.bst
 
 SHELL = bash
 LATEXMK = latexmk -xelatex

@@ -11,10 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - 修改标准色的定义：C：100，M：0，Y：100，K：60。
 - 使用 illustrator 重新生成 logo 文件。
+- 参考文献不显示 doi 和 url 。
 
 ### Added
 
-- 重新支持 BibLaTeX 宏包
+- 重新支持 BibLaTeX 宏包。
+- 添加 github CI。
 
 ## [v2.0.0-beta1] 2025-04-04
 
