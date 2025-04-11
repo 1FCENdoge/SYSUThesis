@@ -18,7 +18,8 @@ jobs:
       - name: Set up TeX Live
         uses: zauguin/install-texlive@v4
         with:
-          package_file: .github/tl_packages
+          packages: |
+            full
 
       - name: Test thesis
         run: make main
