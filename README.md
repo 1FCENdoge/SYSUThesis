@@ -1,4 +1,4 @@
-# 中山大学毕业论文/设计 LaTeX 模板（本科/研究生）（试用）
+# 中山大学毕业论文/设计 LaTeX 模板（本科/研究生）
 
 [![GitHub release](https://img.shields.io/github/release/1FCENdoge/SYSUThesis/all.svg)](https://github.com/1FCENdoge/SYSUThesis/releases/latest)
 [![GitHub commits](https://img.shields.io/github/commits-since/1FCENdoge/SYSUThesis/latest.svg)](https://github.com/1FCENdoge/SYSUThesis/commits/main/)
@@ -9,9 +9,8 @@
 
 1. 使用说明文档 `sysuthesis-guide.pdf` 在发布版中附带，用户也可自行编译；**使用模板前应仔细阅读**。
 
-2. 本科论文模板格式按照本科生论文规范编写，全校通用。研究生模板由于学校并无详细的规定，因此为试用模板，
-不作为强制标准，但已经有部分学院在使用以及在此基础上进行修改与使用。本模板为其他学院模板提供参考，
-若学院无具体规定模板样式，则可直接使用。
+2. 本科论文模板格式按照本科生论文规范编写，全校通用。研究生模板满足中法核工程与技术学院研究生论文格式要求的同时，
+也为其他学院提供可供使用和参考的模板。
 
 3. 本模板要求 TeX Live、MacTeX、MiKTeX 不低于 2017 年的发行版，
 并且尽可能升级到最新。安装和升级方法见
