@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - 重新支持 BibLaTeX 宏包。
 - 添加 github CI。
+- `README.md` 中添加 build 状态。
 
 ## [v2.0.0-beta1] 2025-04-04
 
