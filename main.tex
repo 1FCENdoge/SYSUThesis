@@ -1,0 +1,47 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+\documentclass[
+		degree=doctor
+%		degree-type=academic
+		]{sysuthesis}
+% degree      = doctor | master | bachelor
+% degree-type = academic | professional
+% language    = chinese | english
+% fontset     = windows | mac | ubuntu | fandol
+
+% 加载宏包、全部的配置
+\input{sysusetup.tex}
+
+
+\begin{document}
+
+\maketitle
+\copyrightpage
+
+\frontmatter
+\input{chapters/abstract.tex}
+\tableofcontents
+% \listoffigures
+% \listoftables
+\listoffiguresandtables
+% \input{chapters/notation.tex}
+
+\mainmatter
+\input{chapters/chap01.tex}
+\input{chapters/chap02.tex}
+\input{chapters/chap03.tex}
+\input{chapters/chap04.tex}
+
+\bibliography{reference}  % 参考文献使用 BibTeX 编译
+% \printbibliography       % 参考文献使用 BibLaTeX 编译
+
+\appendix
+\input{chapters/complementary.tex}
+
+\backmatter
+\input{chapters/acknowledgements.tex}
+\input{chapters/achievements.tex}
+
+\end{document}
