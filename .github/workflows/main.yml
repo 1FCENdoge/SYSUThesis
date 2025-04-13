@@ -88,9 +88,9 @@ permissions:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
   # This workflow contains a single job called "build"
   build:
+    if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
