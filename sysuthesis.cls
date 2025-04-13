@@ -1913,7 +1913,7 @@
   	{\textwidth}{>{\centering\arraybackslash\hyphenpenalty=10000\exhyphenpenalty=10000}X}
   	{\centering\sffamily\fontsize{16bp}{28bp}\selectfont
   	  \sysu@title\par}\par
-  	{\centering\rmfamily\fontsize{16bp}{28bp}\selectfont
+  	{\centerlast\rmfamily\fontsize{16bp}{25bp}\selectfont
   	  \sysu@title@en\par}
   	\end{tabularx}
   	\begin{tabular}{ll}
@@ -2017,7 +2017,7 @@
   	\ \vskip 1cm%
   	\ \\
     \parbox[t]{13cm}{%
-      \centering\sffamily\bfseries\fontsize{22bp}{42bp}\selectfont
+      \centerlast\sffamily\bfseries\fontsize{22bp}{37bp}\selectfont
       \sysu@title@en\par
     }\par
   }
@@ -2035,7 +2035,7 @@
     	\makebox[2.3cm][s]{指导教师} & \makebox[8.5cm]{\hfill\sysu@supervisor@names\hfill}   \\ \cline{2-2}
     \end{tabular}
   }
-    \ \vskip 1.5cm%
+    \ \vskip 1cm%
     {\zihao{4}\heiti\underline{\makebox[0.9cm]{\number\year}}年\underline{\makebox[0.9cm]{\number\month}}月\underline{\makebox[0.9cm]{\number\day}}日 }
   \end{titlepage}%
 }

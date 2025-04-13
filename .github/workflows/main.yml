@@ -1,21 +1,102 @@
-name: Test and release
+# name: Test and release
+
+# on:
+#   push:
+#   pull_request:
+
+# permissions:
+#   contents: write
+#   discussions: write
+
+# jobs:
+
+#   test:
+#     if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
+#     name: Test
+#     runs-on: ubuntu-latest
+#     steps:
+
+#       - name: Checkout
+#         uses: actions/checkout@v4
+
+#       - name: Set up TeX Live
+#         uses: zauguin/install-texlive@v4
+#         with:
+#           package_file: .github/tl_packages
+
+#       - name: Test thesis
+#         run: make main
+
+#       - name: Test doc
+#         run: make doc
+
+#       - name: Archive failed test output
+#         if: ${{ failure() }}
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: testfiles
+#           path: build/**/*.diff
+#           retention-days: 3
+
+
+#   release:
+#     if: startsWith(github.ref, 'refs/tags/v')
+#     needs: test
+#     name: Release on GitHub
+#     runs-on: ubuntu-latest
+#     steps:
+
+#       - name: Checkout
+#         uses: actions/checkout@v4
+
+#       - name: Set up TeX Live
+#         uses: zauguin/install-texlive@v4
+#         with:
+#           package_file: .github/tl_packages
+      
+#       - name: Install fonts
+#         run: |
+#           sudo apt-get update -y
+#           sudo apt-get install --no-install-recommends -y ttf-mscorefonts-installer make fonts-noto-cjk-extra
+
+#       - name: Create doc
+#         run: make doc
+
+#       - name: Extract release notes
+#         run: awk '/^#+ \[/ { if (p) { exit }; if ($2 != "[Unreleased]") { p=1 } } p' CHANGELOG.md > release-notes.md
+
+#       - name: Create GitHub release
+#         uses: softprops/action-gh-release@v2
+#         with:
+#           files: |
+#             sysuthesis-guide.pdf
+#           body_path: release-notes.md
+
+name: test
 
 on:
+
   push:
   pull_request:
 
+  workflow_dispatch:
+
+# For softprops/action-gh-release
 permissions:
   contents: write
   discussions: write
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
-  test:
-    if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
-    name: Test
+  if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    steps:
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -23,11 +104,16 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           package_file: .github/tl_packages
-
-      - name: Test thesis
+        
+      - name: Install fonts
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install --no-install-recommends -y ttf-mscorefonts-installer make fonts-noto-cjk-extra
+      
+      - name: Create thesis
         run: make main
 
-      - name: Test doc
+      - name: Create doc
         run: make doc
 
       - name: Archive failed test output
@@ -38,36 +124,14 @@ jobs:
           path: build/**/*.diff
           retention-days: 3
 
-
-  release:
-    if: startsWith(github.ref, 'refs/tags/v')
-    needs: test
-    name: Release on GitHub
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up TeX Live
-        uses: zauguin/install-texlive@v4
-        with:
-          package_file: .github/tl_packages
-      
-      - name: Install fonts
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install --no-install-recommends -y ttf-mscorefonts-installer make fonts-noto-cjk-extra
-
-      - name: Create doc
-        run: make doc
-
       - name: Extract release notes
         run: awk '/^#+ \[/ { if (p) { exit }; if ($2 != "[Unreleased]") { p=1 } } p' CHANGELOG.md > release-notes.md
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/v')
         with:
           files: |
+            main.pdf
             sysuthesis-guide.pdf
           body_path: release-notes.md
