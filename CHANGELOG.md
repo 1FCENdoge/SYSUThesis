@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - 本科生内封英文标题改成 `\centerlast` ，英文标题行间距改为37 bp 。
 - 研究生扉页英文标题改成 `\centerlast` ，英文标题行间距改为25 bp 。
-- 更新 github Action ，减少 CI 所需时间，在发布版中附带说明文档 `sysuthesis-guide.pdf` 和模板预览效果文件 `main.pdf` 。
+- 更新 github Action ，减少 CI 所需时间，在发布版中附带说明文档 `sysuthesis-guide.pdf` 。
 
 ## [v2.0.0-beta2] 2025-04-12
 

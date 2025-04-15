@@ -30,12 +30,7 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           package_file: .github/tl_packages
-        
-      - name: Install fonts
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install --no-install-recommends -y ttf-mscorefonts-installer make fonts-noto-cjk-extra
-      
+              
       - name: Create thesis
         run: make main
 
@@ -58,6 +53,5 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         with:
           files: |
-            main.pdf
             sysuthesis-guide.pdf
           body_path: release-notes.md
