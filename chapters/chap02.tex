@@ -99,7 +99,7 @@
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\textwidth]{confusion.pdf}
+  \includegraphics[width=0.35\textwidth]{sysu-logo.pdf}
   \caption{图号、图题置于图的下方}
 %  \bicaption{图号、图题置于图的下方}{Test figure 1}
   \label{fig:confusion}
@@ -111,7 +111,21 @@
 \end{figure}
 
 关于图片的并排，推荐使用较新的 \pkg{subcaption} 宏包，
-不建议使用 \pkg{subfigure} 或 \pkg{subfig} 等宏包。
+不建议使用 \pkg{subfigure} 或 \pkg{subfig} 等宏包。下面给出一个子图的例子。
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[h]{0.35\textwidth}
+      \includegraphics[width=\linewidth]{sysu-logo.pdf}
+      \caption{子图1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[h]{0.35\textwidth}
+      \includegraphics[width=\linewidth]{red.pdf}
+      \caption{子图2}
+  \end{subfigure}
+  \caption{子图示例}
+\end{figure}
 
 
 

@@ -55,6 +55,7 @@ unicode-math
 makecell
 csvsimple
 adjustbox
+subcaption
 #
 # Dependencies for fonts
 fandol

@@ -430,6 +430,7 @@
 \RequirePackage{color}
 \RequirePackage{titletoc}
 \RequirePackage{caption}
+\RequirePackage{subcaption}
 \RequirePackage{enumitem}
 \RequirePackage[perpage]{footmisc}
 \RequirePackage{url}
@@ -1577,15 +1578,16 @@
 \fancypagestyle{plain}{%
   \fancyhf{}%
   %
-  % 页眉与该部分的章标题相同，宋体 9 磅（小五号）居中。
+  % 奇数页眉与该部分的章标题相同，偶数页眉为“中山大学博士/硕士论文”，宋体 9 磅（小五号）居中。
   % 页码：宋体 9 磅、页面页脚居中。
   \ifsysu@degree@graduate
     \def\sysu@hf@font{\fontsize{9bp}{12bp}\selectfont}
-    \fancyhead[C]{\sysu@hf@font\leftmark}%
+    \fancyhead[EC]{\sysu@hf@font\sysu@thesis@name}
+    \fancyhead[OC]{\sysu@hf@font\leftmark}%
     \fancyfoot[C]{\sysu@hf@font\thepage}%
     \let\@mkboth\markboth
     \def\chaptermark##1{%
-      \markboth{\CTEXifname{\CTEXthechapter\quad}{}##1}{}%
+      \markboth{\CTEXifname{\CTEXthechapter\quad}{}##1}{\sysu@thesis@name}%
     }%
     \let\sectionmark\@gobble
   \else
@@ -1609,11 +1611,11 @@
 \def\ps@chapter{}
 \ctexset{chapter/pagestyle=chapter}
 
-% 空白页不需加页眉（包括页眉线），也不需要有页码。
+% 空白页不需加页眉（包括页眉线），但要有页码。
 \fancypagestyle{blank}{%
   \fancyhf{}%
   \renewcommand\headrulewidth{0pt}%
-%  \fancyfoot[C]{\sysu@hf@font\thepage}%
+ \fancyfoot[C]{\sysu@hf@font\thepage}%
 }
 
 \newif\ifsysu@title@page
@@ -1886,7 +1888,7 @@
   \if@restonecol\twocolumn \else \newpage \fi
 }
 
-% 中文封面：
+% 研究生中文扉页：
 % 密级黑体 12 磅；
 % 论文类型黑体 56 磅；
 % 论文题目黑体 26 磅加粗居中，单倍行距；
@@ -1911,14 +1913,15 @@
   	{\fontsize{12}{12}\selectfont
   	\begin{tabularx}
   	{\textwidth}{>{\centering\arraybackslash\hyphenpenalty=10000\exhyphenpenalty=10000}X}
-  	{\centering\sffamily\fontsize{16bp}{28bp}\selectfont
+  	{\centering\sffamily\fontsize{16bp}{32bp}\selectfont
   	  \sysu@title\par}\par
-  	{\centerlast\rmfamily\fontsize{16bp}{25bp}\selectfont
+  	{\centerlast\rmfamily\fontsize{16bp}{29bp}\selectfont
   	  \sysu@title@en\par}
   	\end{tabularx}
+    \vskip 16bp%
   	\begin{tabular}{ll}
-  		{\makebox[3cm][s]{\zihao{4}\sffamily{专 \hfill 业 \hfill 名 \hfill 称：}}} & \zihao{4}\sysu@speciality \\ [-1ex] \\
-  		{\makebox[3cm][s]{\zihao{4}\sffamily{学 \hfill 位 \hfill 申 \hfill 请 \hfill 人：}}}& \zihao{4}\sysu@author \\ [-1ex] \\
+  		{\makebox[3cm][s]{\zihao{4}\sffamily{专 \hfill 业 \hfill 名 \hfill 称：}}} & \zihao{4}\sysu@speciality \\\vspace{4bp} \\
+  		{\makebox[3cm][s]{\zihao{4}\sffamily{学 \hfill 位 \hfill 申 \hfill 请 \hfill 人：}}}& \zihao{4}\sysu@author \\ \vspace{4bp} \\
   		{\makebox[3cm][s]{\zihao{4}\sffamily{指 \hfill 导 \hfill 教 \hfill 师：}}} & \zihao{4}\sysu@supervisor@names \\
   	\end{tabular}
     }
@@ -1927,7 +1930,7 @@
     	\begin{tabular}{rr}
     		论文答辩委员会主席：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
     		&~\\
-    		成员：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
+    		论文答辩委员会成员：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
     		&~\\
     		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
     		&~\\
