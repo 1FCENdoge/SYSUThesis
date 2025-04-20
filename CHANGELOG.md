@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.0-beta3] 2025-04-20
+
 ### changed
 
 - 本科生内封英文标题改成 `\centerlast` ，英文标题行间距由42 bp 改为37 bp 。
@@ -15,11 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 空白页加上页码。
 - 研究生页眉更改为：奇数页章标题，偶数页“中山大学博士（硕士）学位论文”。
 - 增加组图示例。
-- 对研究生扉页进行改动，论文题目与作者信息距离增大，不再挤在一起。
+- 对研究生扉页进行改动，论文题目与作者信息距离增大，不再挤在一起；委员会的签名栏居中放置。
+- 符号说明不再从奇数页另起。
 
 ## [v2.0.0-beta2] 2025-04-12
 
 
-[Unreleased]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta2...HEAD
+[Unreleased]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta3...HEAD
+[v2.0.0-beta3]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta2...v2.0.0-beta3
 [v2.0.0-beta2]: https://github.com/1FCENdoge/sysuthesis/releases/tag/v2.0.0-beta2
 

@@ -1920,23 +1920,23 @@
   	\end{tabularx}
     \vskip 16bp%
   	\begin{tabular}{ll}
-  		{\makebox[3cm][s]{\zihao{4}\sffamily{专 \hfill 业 \hfill 名 \hfill 称：}}} & \zihao{4}\sysu@speciality \\\vspace{4bp} \\
+  		{\makebox[3cm][s]{\zihao{4}\sffamily{专 \hfill 业：}}} & \zihao{4}\sysu@speciality \\\vspace{4bp} \\
   		{\makebox[3cm][s]{\zihao{4}\sffamily{学 \hfill 位 \hfill 申 \hfill 请 \hfill 人：}}}& \zihao{4}\sysu@author \\ \vspace{4bp} \\
   		{\makebox[3cm][s]{\zihao{4}\sffamily{指 \hfill 导 \hfill 教 \hfill 师：}}} & \zihao{4}\sysu@supervisor@names \\
   	\end{tabular}
     }
     \vskip 1.2cm%
     \zihao{4}{
-    	\begin{tabular}{rr}
-    		论文答辩委员会主席：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
+    	\begin{tabular}{ccc}
+    		论文答辩委员会主席：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}& \makebox[4.5cm][c]{}\\
     		&~\\
-    		论文答辩委员会成员：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
+    		论文答辩委员会成员：& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}& \makebox[4.5cm][c]{}\\
     		&~\\
-    		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
+    		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}& \makebox[4.5cm][c]{}\\
     		&~\\
-    		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}\\
+    		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}& \makebox[4.5cm][c]{}\\
     		&~\\
-    		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}
+    		{}& \raisebox{-1.5ex}{\underline{\makebox[6cm][c]{}}}& \makebox[4.5cm][c]{}
     	\end{tabular}
     }
     \vfill
@@ -2575,7 +2575,7 @@
 % 研究生规定符号说明另页起，标题字体字号等同论文正文，
 \newenvironment{notation}{%
   \ifsysu@degree@graduate
-    \cleardoublepage
+    \clearpage
   \fi
   \sysu@chapter{\sysu@notation@name}%
 }{%
