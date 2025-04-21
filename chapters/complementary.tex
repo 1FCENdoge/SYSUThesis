@@ -6,3 +6,14 @@
 \section{补充章节}
 
 补充内容。
+
+若想将.csv格式的表格直接导入正文中：
+
+\begin{table}
+	\centering
+	\caption{从csv文件中导入表格}
+	\begin{adjustbox}{max width=\linewidth}
+	\csvautobooktabular{tables/asterids.csv}
+	\end{adjustbox}
+	\label{tab:asterid}
+\end{table}

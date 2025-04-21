@@ -22,42 +22,6 @@
   \end{tabular}
 \end{table}
 
-\begin{table}[h] %voc table result
-	\centering
-	\caption{十分复杂的表格}
-	\begin{tabular}{*{5}{c}}
-		\toprule
-		区域 & \tabincell{c}{外侧核热功率\\（MW）} & \tabincell{c}{内侧核热功率\\（MW）} & 结构 & \tabincell{c}{结构核热功率\\（MW）} \\
-		\midrule
-		第一壁涂层 & 20.0 & 13.4 & \multirow{2}{*}{第一壁} & \multirow{2}{*}{151.7} \\
-		第一壁结构层 & 70.2 & 48.1 & ~ & ~ \\
-		\midrule
-		Be-1区 & 37.9 & 26.5 & \multirow{8}{*}{氚增殖区} & \multirow{8}{*}{970.2} \\ 
-		Li$ _{\text{4}} $SiO$ _{\text{4}} $-1区 & 126.7 & 86.8 & ~ & ~ \\
-		Be-2区 & 133.6 & 94.1 & ~ & ~ \\
-		Li$ _{\text{4}} $SiO$ _{\text{4}} $-2区 & 134.4 & 96.2 & ~ & ~ \\
-		Be-3区 & 68.6 & 49.7 & ~ & ~ \\
-		Li$ _{\text{4}} $SiO$ _{\text{4}} $-3区 & 49.6 & 37.2 & ~ & ~ \\
-		Be-4区 & 9.2 & 7.0 & ~ & ~ \\
-		增殖区后支撑 & 7.1 & 5.5 & ~ & ~ \\
-		\midrule
-		屏蔽区（水） & 6.8 & 5.4 & \multirow{2}{*}{屏蔽区} & \multirow{2}{*}{18.2} \\
-		屏蔽区（钢） & 3.3 & 2.7 & ~ & ~ \\
-		\midrule
-		总计 & 667.5 & 472.6 & - & 1140.1 \\
-		\bottomrule
-	\end{tabular}
-	\label{nucheat_tot}
-\end{table}
-
-\begin{table}
-	\centering
-	\caption{从csv文件中导入表格}
-	\begin{adjustbox}{max width=\linewidth}
-	\csvautobooktabular{tables/asterids.csv}
-	\end{adjustbox}
-	\label{tab:asterid}
-\end{table}
 
 如果有表注，推荐使用 \pkg{threeparttable}。这样可以与表格对齐，满足部分评审老师的要求。
 
@@ -84,6 +48,7 @@
   \end{threeparttable}
 \end{table}
 
+
 编制表格应简单明了，表达一致，明晰易懂，表文呼应、内容一致。
 排版时表格字号略小，或变换字体，尽量不分页，尽量不跨节。
 表格太大需要转页时，需要在续表上方注明“续表”，表头页应重复排出。
@@ -99,7 +64,7 @@
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.35\textwidth]{sysu-logo.pdf}
+  \includegraphics[width=0.38\textwidth]{sysu-logo.pdf}
   \caption{图号、图题置于图的下方}
 %  \bicaption{图号、图题置于图的下方}{Test figure 1}
   \label{fig:confusion}
@@ -112,22 +77,6 @@
 
 关于图片的并排，推荐使用较新的 \pkg{subcaption} 宏包，
 不建议使用 \pkg{subfigure} 或 \pkg{subfig} 等宏包。下面给出一个子图的例子。
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}[h]{0.49\textwidth}
-      \centering
-      \includegraphics[width=0.7\linewidth]{sysu-logo.pdf}
-      \caption{子图1}
-  \end{subfigure}
-  % \hfill
-  \begin{subfigure}[h]{0.49\textwidth}
-      \centering
-      \includegraphics[width=0.7\linewidth]{red.pdf}
-      \caption{子图2}
-  \end{subfigure}
-  \caption{子图示例}
-\end{figure}
 
 
 
