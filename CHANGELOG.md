@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### changed
+
+- 对示例内容进行调整，减少示例内容，组图示例不再展示。
+- 删去空白页页码。
+
 ## [v2.0.0-beta3] 2025-04-20
 
 ### changed

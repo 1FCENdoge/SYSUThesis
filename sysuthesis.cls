@@ -1611,11 +1611,11 @@
 \def\ps@chapter{}
 \ctexset{chapter/pagestyle=chapter}
 
-% 空白页不需加页眉（包括页眉线），但要有页码。
+% 空白页无任何内容。
 \fancypagestyle{blank}{%
   \fancyhf{}%
   \renewcommand\headrulewidth{0pt}%
- \fancyfoot[C]{\sysu@hf@font\thepage}%
+%  \fancyfoot[C]{\sysu@hf@font\thepage}%
 }
 
 \newif\ifsysu@title@page
