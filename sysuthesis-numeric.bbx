@@ -6,6 +6,7 @@
 \ExecuteBibliographyOptions{
   gbpub     = false,
   gbalign   = left,
+  gbpunctin = false,
   url       = false,
   doi       = false,
 }
@@ -18,6 +19,12 @@
   }{%
     \MakeSentenceCase{#1}%
   }%
+}
+
+% 将会议论文集析出形式由 [C]// 改为 [C].
+\DefineBibliographyStrings{english}{
+  in   = {},
+  incn = {},
 }
 
 %

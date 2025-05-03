@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 对示例内容进行调整，减少示例内容，组图示例不再展示。
 - 删去空白页页码。
 - 参考文献使用 BibLaTeX 编译时不显示 url 和 doi 链接。
+- 删去 `sysuthesis.cls` 文件中的版本标识。
+- BibLaTeX 将会议论文集析出形式由 [C]// 改为 [C].
 
 ## [v2.0.0-beta3] 2025-04-20
 

@@ -1,9 +1,6 @@
 % !TeX encoding = UTF-8
 % !TeX program = xelatex
 % !TeX spellcheck = en_US
-
-%
-% 
 %
 % This file may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3c
@@ -111,8 +108,7 @@
 
 
 \title{\cls{sysuthesis} 使用说明}
-\author{1FCENdoge\thanks{Sino-French Institute of Nuclear Engineering and Technology, Sun Yat-sen University}\and
-        Zeping Lee\thanks{School of Mathematical Sciences, USTC} }
+\author{1FCENdoge\thanks{中山大学中法核工程与技术学院}\and Zeping Lee\thanks{中国科学技术大学数学科学学院} }
 \date{\today}
 \maketitle
 
@@ -125,7 +121,7 @@
 模板编辑得到，部分格式参照中科大本科、研究生论文格式，
 再将中山大学本科和研究生部分论文格式进行统一。
 
-本模板主要依据中山大学 LaTeX 论文项目模板（wu-kan 维护）、
+本模板主要依据中山大学 \LaTeX{} 论文项目模板（wu-kan 维护）、
 中山大学毕业论文模板（huangjj27 开发）以及本人写硕士论文期间所用的模板编写。
 2025年3月，本人将几个模板进行整合梳理，新模板的主要亮点：支持本科和研究生模板一键切换。
 
@@ -136,7 +132,7 @@
 
 用户在使用 \pkg{sysuthesis} 模板前，应先了解学校对论文写作的要求。
 如果在使用的过程中遇到问题，可以阅读
-\href{https://github.com/ustctug/sysuthesis/wiki}{常见问题}，
+\href{https://github.com/ustctug/ustcthesis/wiki}{常见问题}，
 或者在 \href{https://github.com/1FCENdoge/sysuthesis/issues}{GitHub Issues}
 中反馈。
 
@@ -156,7 +152,8 @@
     类别     & 文件                      & 说明                         \\
     \midrule
     模板文件 & \file{sysuthesis.cls}     & 模板文件                     \\
-             & \file{sysuthesis-numerical.bst}   & \BibTeX{} 参考文献表格式     \\
+             & \file{sysuthesis-numerical.bst}   & \BibTeX{} 参考文献表格式   \\
+             & \file{sysuthesis-numeric.bbx}    & BibLaTeX 参考文献表格式  \\
              & \file{figures/sysu*.pdf} & 校徽图片               \\
     \midrule
     使用说明 & \file{sysuthesis-guide.tex} & 模板使用说明的源代码         \\
@@ -408,6 +405,7 @@ key-value 的方式填写，如：
 \subsection{摘要和章节}
 \DescribeEnv{abstract}
 \DescribeEnv{abstract*}
+\DescribeEnv{abstract**}
 \DescribeEnv{notation}
 \DescribeEnv{acknowledgements}
 \DescribeEnv{achievements}
@@ -415,6 +413,7 @@ key-value 的方式填写，如：
 \begin{itemize}
   \item 中文摘要：\env{abstract}
   \item 英文摘要：\env{abstract*}
+  \item 第三种语言摘要（如果需要）：\env{abstract**}
   \item 符号说明：\env{notation}
   \item 致谢：    \env{acknowledgements}
   \item 科研成果：\env{achievements}
@@ -423,6 +422,7 @@ key-value 的方式填写，如：
 
 \DescribeOption{keywords}
 \DescribeOption{keywords*}
+\DescribeOption{keywords**}
 摘要的关键词应使用 \cs{sysusetup} 的接口进行设置，在录入时使用西文逗号隔开，为满足中法核的需要，本科论文加入了法语摘要，
 比如：
 \begin{latex}
