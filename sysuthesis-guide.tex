@@ -108,7 +108,11 @@
 
 
 \title{\cls{sysuthesis} 使用说明}
-\author{1FCENdoge\thanks{中山大学中法核工程与技术学院}\and Zeping Lee\thanks{中国科学技术大学数学科学学院} }
+\author{1FCENdoge\footnotemark[1] \and Marc-Antoine\footnotemark[1] \and SYSU-SCC\footnotemark[3] \and Zeping Lee\footnotemark[2]}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnotetext[1]{中山大学中法核工程与技术学院}
+\footnotetext[2]{中国科学技术大学数学科学学院}
+\footnotetext[3]{中山大学超算队}
 \date{\today}
 \maketitle
 
@@ -167,6 +171,7 @@
              & \file{reference.bib}       & \BibTeX{} 示例数据库         \\
     \midrule
     其他     & \file{README.md}          & 基本说明                     \\
+             & \file{CHANGELOG.md}       & 修改记录                     \\
              & \file{latexmkrc}          & latexmk 的配置文件           \\
              & \file{Makefile}           & GNU make 的配置文件          \\
              & \file{.vscode/}           & VS Code 的配置文件           \\
@@ -196,6 +201,7 @@
 \pkg{titletoc},
 \pkg{url},
 \pkg{booktabs},
+\pkg{csvsimple},
 \pkg{unicode-math}。
 
 另外，模板还对其他宏包提供了支持，包括：
