@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.0-beta4] 2025-05-03
+
 ### changed
 
 - 对示例内容进行调整，减少示例内容，组图示例不再展示。
@@ -32,7 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v2.0.0-beta2] 2025-04-12
 
 
-[Unreleased]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta3...HEAD
+[Unreleased]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta4...HEAD
+[v2.0.0-beta4]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta3...v2.0.0-beta4
 [v2.0.0-beta3]: https://github.com/1FCENdoge/sysuthesis/compare/v2.0.0-beta2...v2.0.0-beta3
 [v2.0.0-beta2]: https://github.com/1FCENdoge/sysuthesis/releases/tag/v2.0.0-beta2
 
