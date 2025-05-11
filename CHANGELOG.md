@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### added
 
 - 添加 `author-year` 参考文献样式以及 `inline` 引用样式。
-- 添加参考文献引用样式示例。
+- 恢复参考文献引用样式示例。
 
 ### deleted
 
