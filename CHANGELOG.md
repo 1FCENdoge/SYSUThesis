@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - 删除生僻字测试。
 
+### changed
+
+- 将证明完成的小方块从实心方块换成空心方块。
+
 ## [v2.0.0-beta4] 2025-05-03
 
 ### changed

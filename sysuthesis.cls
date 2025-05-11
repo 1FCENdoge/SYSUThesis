@@ -1280,7 +1280,8 @@
     }%
     %
     % 兼容 \pkg{amsthm} 的 \cs{qedsymbol}。
-    \renewcommand\sysu@qed{\ensuremath{\QED}}%
+    % \renewcommand\sysu@qed{\ensuremath{\QED}}%
+    \renewcommand\sysu@qed{\ensuremath{\square}}% 将证明完成后的实心方块换成空心方块。
   }%
 }
 
