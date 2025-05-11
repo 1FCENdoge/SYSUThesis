@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### added
+
+- 添加 `author-year` 参考文献样式以及 `inline` 引用样式。
+- 添加参考文献引用样式示例。
+
+### deleted
+
+- 删除生僻字测试。
+
 ## [v2.0.0-beta4] 2025-05-03
 
 ### changed

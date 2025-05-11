@@ -105,4 +105,4 @@
 \end{algorithm}
 
 注意，我们可以在论文中插入算法，但是插入大段的代码是愚蠢的。
-然而这并不妨碍有的同学选择这么做，对于这些同学，建议用 \pkg{listings} 宏包。
+然而这并不妨碍有的同学选择这么做，对于这些同学，建议用 \pkg{listings} 或者 \pkg{minted} 宏包，但是 \pkg{minted} 宏包会依赖 python 和 pygments 库，编译时还需要加上 \cs{--shell-escape} 参数。
